@@ -15,14 +15,29 @@
            window.alert("howdy");
             var firstName = document.getElementById("fName").value;
             if(firstName == "")
+          
             {
                 document.getElementById("fName").style.backgroundColor = "red";
+               
                 document.getElementById("fName").focus();
                 document.getElementById("fNameMessage").innerHTML = "* Required";
             
                 
                 return false;
             }
+            var email = document.getElementById("email").value;
+            if(email == "")
+           {
+            document.getElementById("email").style.backgroundcolor = "blue";
+            document.getElementById("email").focus();
+            document.getElementById("fNameMessage").innerHTML = "* Required";
+
+           }
+           if(terms == "")
+           {
+            window.alert("howdy")
+
+           }
             // need to check for the other textbox and also remove the red and the required message
             // something is filled in.
         }
@@ -35,8 +50,8 @@
         <form action="">
             <p>First Name: <input type="text" id="fName"></p>
             <p>Last Name: <input type="text" id="lName"></p>
-            <p>Email: <input type="text" id="lName"></p>
-            <p>Terms of Agreement: <input type="text" id="lName"></p>
+            <p>Email: <input type="text" id="email"></p>
+            <p>Terms of Agreement: <input type="text" id="terms"></p>
             <button id="btnSubmit" onclick="checkboxes()">Submit My Info</button>
         </form>
         <p><a href="homepage.html"> Home Page</a></p>
